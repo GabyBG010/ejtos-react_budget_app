@@ -3,7 +3,7 @@ import { AppContext } from '../context/AppContext';
 const Budget = () => {
     const { budget } = useContext(AppContext);
     const { dispatch } = useContext(AppContext);
-
+    const { currency } = useContext(AppContext);
     const increaseBudget = (param) => {
 
         dispatch({
@@ -14,7 +14,7 @@ const Budget = () => {
     }
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: this.state.currency{}</span>
+            <span>Budget:{currency}</span>
 
             <input
                         required='required'
